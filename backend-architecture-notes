@@ -1,0 +1,28 @@
+1. The Node.js server applied is monolithic architecture
+   (UI, service layer, DAL)
+
+2. In contrast, Microservice architecture is UI connect to many microservices rather than a single server construct.
+
+3. Microservice architecture
+
+- easy to scale horizontally
+- Some modules have to consider centralizing, like logging
+- Proper communications architecture between services needed to isolate service failure
+
+4. By nature, Request/Response Driven communications are synchronous - every request will have a response attached with the requested data. Node.js circumvent this and is by nature async. Request/Response driven comms is now asynchronous and we can benefit from both their strengths.
+
+5. Event driven architecture may not respond to a request immediately.
+   Examples of event driven architecture
+   a. Consumer subscribe to notifications
+   b. Message queue processed async - notifications, emails, sms, delivery assignments
+   c. Publisher, subscriber model - messages are published and consumed asynchronously
+
+// --- event driven communication --- //
+
+MQTT stands for Message Queuing Telemetry Transport. It is a lightweight messaging protocol designed for constrained devices and low-bandwidth
+
+MQTT follows a publish-subscribe model, where devices can publish messages (topics) to a broker, and other devices can subscribe to specific topics to receive those messages.
+
+A public MQTT broker is a publicly accessible MQTT server that acts as a message broker, allowing devices and applications from different sources to connect and communicate with each other.
+
+// end //
